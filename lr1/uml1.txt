@@ -1,0 +1,12 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+class "Дачник" as P {
+ Автомобиль
+Вывезти в металлоприемку(Черный металл, Когда будет 100кг) -> Деньги
+}
+hide circle
+@enduml

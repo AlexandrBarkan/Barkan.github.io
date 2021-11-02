@@ -1,0 +1,15 @@
+@startuml
+actor "Управляющий" as owner
+boundary "Система учета" as app
+entity "База данных" as data
+actor "Рабочий" as trainee
+
+trainee-> owner: Данные о сортировке
+owner-> app : Подтверждение данных сортировки
+app-> data : Запись данных сортировки
+owner-> trainee : Подтверждение начала заполнения хранилища
+trainee-> owner: Данные о заполнении хранилища
+owner-> app : Подтверждение данных
+app-> data : Запись данных о заполнении
+owner-> trainee: Утверждение работ
+@enduml
